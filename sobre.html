@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-90W78PZ870"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-90W78PZ870');
+    </script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre o Projeto | Rota Ninja</title>
+    <meta name="description" content="Conheça a história e a missão do Rota Ninja, o aplicativo criado para revolucionar a logística de entregas de última milha.">
+
+    <!-- CÓDIGO DE VERIFICAÇÃO DO GOOGLE ADSENSE -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2444507736069641" crossorigin="anonymous"></script>
+
+    <style>
+        :root {
+            --bg-color: #09090b;
+            --surface-color: rgba(24, 24, 27, 0.6);
+            --surface-border: rgba(255, 255, 255, 0.08);
+            --text-primary: #f8fafc;
+            --text-secondary: #94a3b8;
+            --brand-primary: #ff8c00;
+            --brand-gradient: linear-gradient(135deg, #ff8c00, #ff4500);
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            background-color: var(--bg-color);
+            background-image: radial-gradient(circle at 50% 0%, rgba(255, 140, 0, 0.05) 0%, transparent 50%);
+            background-attachment: fixed;
+            color: var(--text-primary);
+            font-family: system-ui, -apple-system, sans-serif;
+            line-height: 1.6;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* NAVEGAÇÃO PRINCIPAL */
+        header {
+            width: 100%; max-width: 1100px; padding: 20px 32px;
+            display: flex; justify-content: space-between; align-items: center;
+            border-bottom: 1px solid var(--surface-border);
+            flex-wrap: wrap; gap: 15px;
+        }
+
+        .logo { font-size: 1.5rem; font-weight: 800; color: var(--text-primary); text-decoration: none; letter-spacing: -0.5px; }
+        .logo span { color: var(--brand-primary); }
+
+        nav { display: flex; gap: 20px; flex-wrap: wrap; }
+        nav a { color: var(--text-secondary); text-decoration: none; font-weight: 600; font-size: 0.95rem; transition: color 0.2s; }
+        nav a:hover, nav a.active { color: var(--brand-primary); }
+
+        /* CONTEÚDO DA PÁGINA */
+        main { width: 100%; max-width: 800px; padding: 60px 32px; display: flex; flex-direction: column; flex-grow: 1; }
+        
+        h1 { font-size: clamp(2rem, 4vw, 3rem); font-weight: 800; line-height: 1.2; letter-spacing: -1px; margin-bottom: 10px; color: var(--brand-primary); }
+        .subtitle { font-size: 1.1rem; color: var(--text-secondary); margin-bottom: 40px; border-bottom: 1px solid var(--surface-border); padding-bottom: 20px; }
+
+        .text-block { color: var(--text-primary); font-size: 1.05rem; margin-bottom: 25px; line-height: 1.8; }
+        .text-block strong { color: var(--brand-primary); }
+        
+        .highlight-box {
+            background: rgba(255, 140, 0, 0.05);
+            border-left: 4px solid var(--brand-primary);
+            padding: 25px;
+            border-radius: 0 12px 12px 0;
+            margin: 40px 0;
+        }
+
+        .highlight-box h3 { margin-bottom: 15px; color: #fff; }
+
+        /* RODAPÉ */
+        footer { width: 100%; border-top: 1px solid var(--surface-border); padding: 32px; text-align: center; color: var(--text-secondary); font-size: 0.85rem; margin-top: auto; }
+        footer p { margin-bottom: 12px; }
+        footer a { color: var(--brand-primary); text-decoration: none; font-weight: 600; transition: color 0.2s; }
+        footer a:hover { color: #ff4500; text-decoration: underline; }
+        .legal-links { display: flex; justify-content: center; gap: 20px; margin-bottom: 20px; flex-wrap: wrap; }
+
+        @media (max-width: 768px) {
+            header { flex-direction: column; text-align: center; }
+            nav { justify-content: center; }
+            main { padding: 40px 20px; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <a href="index.html" class="logo">Rota<span>Ninja</span></a>
+        <nav>
+            <a href="index.html">Início</a>
+            <a href="dicas.html">Dicas de Logística</a>
+            <a href="sobre.html" class="active">Sobre o Projeto</a>
+            <a href="contato.html">Contato</a>
+        </nav>
+    </header>
+
+    <main>
+        <h1>A História do Rota Ninja</h1>
+        <p class="subtitle">Nascido no asfalto, desenvolvido para quem vive a logística.</p>
+
+        <p class="text-block">
+            Quem trabalha com entregas sabe que o maior desafio do dia não é o trânsito pesado ou o volume de pacotes, mas sim a <strong>desorganização da informação</strong>. O projeto Rota Ninja nasceu exatamente de uma dor real vivida nas ruas: o tempo perdido decifrando planilhas brutas de transportadoras e sistemas que não entendem a dinâmica de quem está atrás do volante.
+        </p>
+
+        <p class="text-block">
+            A rotina de "arranca e para", de procurar números invisíveis nos muros das casas, de cruzar a mesma rua três vezes por causa de uma rota mal calculada, tudo isso se converte em combustível desperdiçado, desgaste do carro e, acima de tudo, menos tempo em casa com a família.
+        </p>
+
+        <div class="highlight-box">
+            <h3>A Nossa Missão</h3>
+            <p style="color: var(--text-secondary); line-height: 1.6;">
+                O Rota Ninja foi criado com um objetivo claro: fornecer aos entregadores e motoristas independentes ferramentas visuais táticas de alto nível, geralmente restritas às grandes transportadoras corporativas. Queremos transformar dados brutos numa tela limpa e inteligente, focada exclusivamente em fazer você chegar em casa mais cedo.
+            </p>
+        </div>
+
+        <p class="text-block">
+            Para solucionar isso, desenvolvemos algoritmos como o <strong>Efeito Zíper</strong> (que alinha as entregas com a mão da rua) e o <strong>Sistema de Bags</strong> (fatiando cargas gigantescas em blocos fáceis de manusear dentro do carro). 
+        </p>
+        
+        <p class="text-block">
+            Hoje, o Rota Ninja é mantido pela <a href="https://github.com/daninjac" target="_blank" style="color: var(--brand-primary); text-decoration: none; font-weight: bold;">Daninjac Apps</a> e continuará evoluindo de forma gratuita para a comunidade, sendo custeado apenas através de publicidade transparente. Nós acreditamos que a tecnologia deve trabalhar a favor de quem movimenta a economia urbana.
+        </p>
+    </main>
+
+    <footer>
+        <div class="legal-links">
+            <a href="termos.html">Termos de Uso</a>
+            <a href="privacidade.html">Política de Privacidade</a>
+        </div>
+        <p>&copy; 2026 Daninjac Apps. Plataforma focada em inovação logística.</p>
+        <p>Desenvolvido com precisão por <a href="https://github.com/daninjac" target="_blank">Daninjac</a>.</p>
+    </footer>
+
+</body>
+</html>
