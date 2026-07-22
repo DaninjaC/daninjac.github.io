@@ -46,7 +46,6 @@
             align-items: center;
         }
 
-        /* NAVEGAÇÃO PRINCIPAL (NOVO) */
         header {
             width: 100%; max-width: 1100px; padding: 20px 32px;
             display: flex; justify-content: space-between; align-items: center;
@@ -61,7 +60,6 @@
         nav a { color: var(--text-secondary); text-decoration: none; font-weight: 600; font-size: 0.95rem; transition: color 0.2s; }
         nav a:hover, nav a.active { color: var(--brand-primary); }
 
-        /* SEÇÃO HERO */
         main { width: 100%; max-width: 1100px; padding: 60px 32px; display: flex; flex-direction: column; align-items: center; text-align: center; flex-grow: 1; }
         
         .hero-badge { background: rgba(255, 140, 0, 0.1); color: var(--brand-primary); padding: 6px 16px; border-radius: 100px; font-size: 0.85rem; font-weight: 600; margin-bottom: 24px; border: 1px solid rgba(255, 140, 0, 0.2); }
@@ -78,22 +76,43 @@
         }
         .btn-primary:hover { transform: translateY(-3px); box-shadow: 0 12px 40px rgba(255, 140, 0, 0.4); }
 
-        /* GRADE DE RECURSOS */
-        .features-section { width: 100%; margin-top: 80px; display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; text-align: left; }
+        /* SEÇÕES DE CONTEÚDO EM TEXTO - FOCO SEO/ADSENSE */
+        .content-section {
+            width: 100%; margin-top: 80px; text-align: left;
+            background: rgba(255,255,255,0.02); padding: 40px; border-radius: 20px;
+            border: 1px solid var(--surface-border);
+        }
+        
+        .content-section h2 { font-size: 2rem; color: var(--brand-primary); margin-bottom: 20px; letter-spacing: -0.5px; }
+        .text-block { color: var(--text-secondary); font-size: 1.05rem; margin-bottom: 20px; line-height: 1.8; }
+        
+        /* GRID DE FUNCIONALIDADES */
+        .features-section { width: 100%; margin-top: 60px; display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; text-align: left; }
         .feature-card { background: var(--surface-color); border: 1px solid var(--surface-border); padding: 32px; border-radius: 20px; transition: all 0.3s; }
         .feature-card:hover { border-color: rgba(255, 140, 0, 0.4); transform: translateY(-5px); background: rgba(30, 30, 35, 0.8); }
         .feature-icon-wrapper { width: 50px; height: 50px; background: rgba(255, 140, 0, 0.1); border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; margin-bottom: 20px; border: 1px solid rgba(255, 140, 0, 0.2); }
         .feature-card h3 { font-size: 1.25rem; font-weight: 700; margin-bottom: 12px; color: var(--text-primary); }
         .feature-card p { color: var(--text-secondary); font-size: 0.95rem; }
 
-        /* CHAMADA PARA O BLOG */
+        /* GRID DE PASSOS (COMO FUNCIONA) */
+        .steps-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; margin-top: 30px; }
+        .step-item { background: transparent; padding: 20px 0; border-top: 2px solid rgba(255,140,0,0.3); }
+        .step-number { font-size: 2rem; font-weight: 900; color: var(--brand-primary); opacity: 0.8; margin-bottom: 10px; }
+        .step-item h3 { font-size: 1.2rem; margin-bottom: 10px; color: var(--text-primary); }
+        .step-item p { color: var(--text-secondary); font-size: 0.95rem; line-height: 1.6; }
+
+        /* FAQ (PERGUNTAS FREQUENTES) */
+        .faq-item { background: var(--surface-color); border: 1px solid var(--surface-border); border-radius: 12px; margin-bottom: 15px; padding: 25px; text-align: left; }
+        .faq-item h3 { color: var(--brand-primary); font-size: 1.15rem; margin-bottom: 12px; }
+        .faq-item p { color: var(--text-secondary); font-size: 1rem; line-height: 1.7; }
+
+        /* CTA BLOG */
         .cta-blog { margin-top: 60px; padding: 40px; background: rgba(255,140,0,0.05); border: 1px solid var(--brand-primary); border-radius: 20px; width: 100%; }
         .cta-blog h2 { margin-bottom: 15px; color: var(--text-primary); }
         .cta-blog p { color: var(--text-secondary); margin-bottom: 20px; }
-        .btn-secondary { background: transparent; color: var(--brand-primary); border: 2px solid var(--brand-primary); padding: 12px 24px; border-radius: 8px; text-decoration: none; font-weight: bold; transition: all 0.2s; }
+        .btn-secondary { background: transparent; color: var(--brand-primary); border: 2px solid var(--brand-primary); padding: 12px 24px; border-radius: 8px; text-decoration: none; font-weight: bold; transition: all 0.2s; display: inline-block; }
         .btn-secondary:hover { background: var(--brand-primary); color: #000; }
 
-        /* RODAPÉ */
         footer { width: 100%; border-top: 1px solid var(--surface-border); padding: 32px; text-align: center; color: var(--text-secondary); font-size: 0.85rem; margin-top: auto; }
         footer p { margin-bottom: 12px; }
         footer a { color: var(--brand-primary); text-decoration: none; font-weight: 600; transition: color 0.2s; }
@@ -105,6 +124,7 @@
             nav { justify-content: center; }
             .features-section { grid-template-columns: 1fr; }
             main { padding: 40px 20px; }
+            .content-section { padding: 25px; }
         }
     </style>
 </head>
@@ -121,47 +141,102 @@
     </header>
 
     <main>
-        <div class="hero-badge">🚀 O FUTURO DA LOGÍSTICA URBANA</div>
+        <div class="hero-badge">🚀 TECNOLOGIA EM LOGÍSTICA URBANA</div>
         
         <h1>Otimize sua rota e <span class="highlight">ganhe tempo</span></h1>
         
-        <p class="subtitle">A ferramenta profissional que processa sua planilha de entregas. Elimine o zig-zag, reduza manobras e poupe seu combustível e o asfalto.</p>
+        <p class="subtitle">A ferramenta profissional que processa sua planilha de entregas bruta e cria uma estratégia visual avançada. Elimine o zig-zag, reduza manobras e poupe seu combustível e o asfalto.</p>
         
         <a href="/spxninja/" class="btn-primary">
             ACESSAR APLICATIVO
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
         </a>
 
+        <!-- GRID DE FUNCIONALIDADES -->
         <section class="features-section">
             <div class="feature-card">
                 <div class="feature-icon-wrapper">🧠</div>
                 <h3>Inteligência de Trajeto</h3>
-                <p>O algoritmo segue o sentido correto do trânsito (Efeito Zíper) e penaliza cruzamentos repetidos para garantir a máxima otimização do seu tempo.</p>
+                <p>O algoritmo segue o sentido correto do trânsito (Efeito Zíper) e penaliza cruzamentos repetidos para garantir a máxima otimização do seu tempo em campo.</p>
             </div>
             
             <div class="feature-card">
                 <div class="feature-icon-wrapper">🎒</div>
                 <h3>Sistema de Bags</h3>
-                <p>Fatiamos sua carga diária em Lotes exatos de 10 pacotes. O Mapa de Calor integrado mostra o volume de cada cliente automaticamente.</p>
+                <p>Fatiamos sua carga diária em lotes exatos de 10 pacotes. O Mapa de Calor integrado mostra o volume de cada cliente automaticamente na tela.</p>
             </div>
             
             <div class="feature-card">
                 <div class="feature-icon-wrapper">✏️</div>
                 <h3>Rotas Manuais e Vagas</h3>
-                <p>Desenhe o trajeto na tela e crie estacionamentos centrais. Zere um quarteirão inteiro caminhando, evitando o desgaste do veículo.</p>
+                <p>Desenhe o trajeto na tela e crie estacionamentos centrais. Zere um quarteirão inteiro caminhando, evitando o desgaste severo do veículo.</p>
             </div>
             
             <div class="feature-card">
                 <div class="feature-icon-wrapper">🧭</div>
                 <h3>GPS Focado</h3>
-                <p>Navegação em 3 camadas visuais, com alerta de radares e baixa automática no sistema ao se aproximar do cliente.</p>
+                <p>Navegação tática em 3 camadas visuais, com alerta de radares embutido e baixa automática no sistema ao se aproximar do raio do cliente.</p>
+            </div>
+        </section>
+
+        <!-- SEÇÃO: COMO FUNCIONA (Volume de Texto) -->
+        <section class="content-section">
+            <h2>Como o Rota Ninja Funciona?</h2>
+            <p class="text-block">Nós simplificamos o processo complexo de logística para que você perca menos tempo no centro de distribuição e passe a focar apenas no asfalto. Veja como a mágica acontece na prática:</p>
+            
+            <div class="steps-grid">
+                <div class="step-item">
+                    <div class="step-number">01</div>
+                    <h3>Carregamento da Base</h3>
+                    <p>Você insere a planilha de entregas bruta (gerada pela transportadora) no sistema. O Rota Ninja lê todos os endereços instantaneamente, mantendo os dados 100% seguros na memória local do seu celular.</p>
+                </div>
+                <div class="step-item">
+                    <div class="step-number">02</div>
+                    <h3>Auditoria e Otimização</h3>
+                    <p>Comparamos a rota original da empresa com a nossa "Rota Otimizada". O algoritmo elimina retornos desnecessários, alinha as entregas de acordo com a mão das vias e agrupa clientes vizinhos.</p>
+                </div>
+                <div class="step-item">
+                    <div class="step-number">03</div>
+                    <h3>Separação Inteligente</h3>
+                    <p>Antes de ligar o motor, o aplicativo fatia sua carga em "Bags" (lotes de 10 pacotes). Assim, você sabe exatamente quais mercadorias devem ir no banco do passageiro e quais vão para o porta-malas.</p>
+                </div>
+                <div class="step-item">
+                    <div class="step-number">04</div>
+                    <h3>Navegação Dinâmica</h3>
+                    <p>A tela do GPS foi feita para o motorista não se distrair. Ao chegar a 30 metros da residência do cliente, o sistema afasta o zoom automaticamente e libera os botões de baixa, avançando para o próximo alvo.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SEÇÃO: FAQ (Volume de Texto + Q&A SEO) -->
+        <section class="content-section">
+            <h2>Perguntas Frequentes</h2>
+            
+            <div class="faq-item">
+                <h3>O aplicativo Rota Ninja é gratuito?</h3>
+                <p>Sim! A plataforma foi desenvolvida para apoiar a comunidade de entregadores parceiros. O uso das ferramentas de roteirização, auditoria de planilhas e navegação GPS é totalmente gratuito. A exibição eventual de anúncios nos ajuda a manter a infraestrutura e os servidores no ar sem cobrar mensalidades de quem está trabalhando duro na rua.</p>
+            </div>
+            
+            <div class="faq-item">
+                <h3>Meus dados e os dados dos clientes ficam armazenados?</h3>
+                <p>Absolutamente não. Nós respeitamos rigorosamente a LGPD. O Rota Ninja utiliza uma tecnologia moderna chamada <em>Client-Side Processing</em>. Isso significa que a sua planilha é lida diretamente na memória do seu aparelho. Nenhum nome, endereço ou informação de pacote é enviado para os nossos servidores. Sua operação permanece totalmente privada.</p>
+            </div>
+            
+            <div class="faq-item">
+                <h3>Preciso instalar o aplicativo pelas lojas oficiais (Play Store ou App Store)?</h3>
+                <p>O Rota Ninja opera como um Web App Progressivo (PWA). Você não precisa consumir o armazenamento do seu celular baixando arquivos pesados. Basta acessar o nosso endereço pelo navegador (Google Chrome ou Safari), abrir o menu de opções e clicar em "Adicionar à Tela Inicial". Ele criará um ícone e funcionará exatamente como um aplicativo nativo.</p>
+            </div>
+            
+            <div class="faq-item">
+                <h3>Para quais perfis de entregadores a ferramenta é indicada?</h3>
+                <p>O sistema foi desenhado para motoristas que trabalham com volume massivo de pacotes de última milha. Se você presta serviços para plataformas de e-commerce, é motorista agregado de transportadoras ou faz rotas diárias com mais de 30 paradas numa mesma região, o Rota Ninja vai mudar drasticamente a sua eficiência operacional e economizar o seu combustível.</p>
             </div>
         </section>
 
         <section class="cta-blog">
             <h2>Quer entregar mais rápido?</h2>
-            <p>Descubra técnicas avançadas de roteirização, como o Método das Bags e como evitar os erros que mais gastam combustível na última milha.</p>
-            <a href="dicas.html" class="btn-secondary">Ler Dicas de Logística</a>
+            <p>Descubra técnicas avançadas de roteirização, aprenda a usar o Método das Bags e veja como evitar os erros que mais gastam combustível na última milha.</p>
+            <a href="dicas.html" class="btn-secondary">Ler Artigos e Dicas</a>
         </section>
     </main>
 
