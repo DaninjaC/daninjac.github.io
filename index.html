@@ -27,7 +27,6 @@
             --text-secondary: #94a3b8;
             --brand-primary: #ff8c00;
             --brand-gradient: linear-gradient(135deg, #ff8c00, #ff4500);
-            --glow-shadow: 0 8px 32px rgba(255, 140, 0, 0.25);
         }
 
         * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -71,14 +70,7 @@
         .hero-badge { display: inline-block; background: rgba(255, 140, 0, 0.1); color: var(--brand-primary); padding: 6px 16px; border-radius: 100px; font-size: 0.85rem; font-weight: 600; margin-bottom: 24px; border: 1px solid rgba(255, 140, 0, 0.2); }
         h1 { font-size: clamp(2.5rem, 5vw, 3.5rem); font-weight: 800; line-height: 1.1; letter-spacing: -1px; margin-bottom: 20px; }
         h1 .highlight { background: var(--brand-gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-        .subtitle { font-size: 1.1rem; color: var(--text-secondary); margin-bottom: 40px; max-width: 600px; }
-        
-        .btn-primary {
-            background: var(--brand-gradient); color: #fff; font-size: 1.1rem; font-weight: 700; text-decoration: none;
-            padding: 18px 40px; border-radius: 12px; box-shadow: var(--glow-shadow); transition: all 0.3s ease;
-            display: inline-flex; align-items: center; gap: 10px;
-        }
-        .btn-primary:hover { transform: translateY(-3px); box-shadow: 0 12px 40px rgba(255, 140, 0, 0.4); }
+        .subtitle { font-size: 1.1rem; color: var(--text-secondary); margin-bottom: 20px; max-width: 600px; }
 
         /* SEÇÕES DE CONTEÚDO (MURALHA DE TEXTO ADSENSE) */
         .content-section {
@@ -143,6 +135,8 @@
             <a href="dicas.html">Dicas de Logística</a>
             <a href="sobre.html">Sobre o Projeto</a>
             <a href="contato.html">Contato</a>
+            <!-- Link discreto para o aplicativo no menu -->
+            <a href="https://daninjac.github.io/spxninja/">Acessar App</a>
         </nav>
     </header>
 
@@ -154,12 +148,6 @@
                 <div class="hero-badge">🚀 TECNOLOGIA EM LOGÍSTICA URBANA</div>
                 <h1>Otimize sua rota e <span class="highlight">ganhe tempo</span></h1>
                 <p class="subtitle">A ferramenta profissional que processa sua planilha de entregas bruta. Elimine o zig-zag, reduza manobras e poupe seu combustível e o asfalto.</p>
-                
-                <!-- Verifique se o link abaixo abre o seu app corretamente -->
-                <a href="https://daninjac.github.io/spxninja/" class="btn-primary">
-                    ACESSAR APLICATIVO
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-                </a>
             </div>
             
             <div class="hero-image">
