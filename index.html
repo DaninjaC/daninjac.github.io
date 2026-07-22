@@ -1,18 +1,16 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-90W78PZ870"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
 
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-90W78PZ870"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+      gtag('config', 'G-90W78PZ870');
+    </script>
 
-  gtag('config', 'G-90W78PZ870');
-</script>
-
-    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rota Ninja | Otimização Inteligente de Entregas</title>
@@ -41,14 +39,13 @@
 
         body {
             background-color: var(--bg-color);
-            /* Efeito de luzes no fundo */
             background-image: 
                 radial-gradient(circle at 15% 20%, rgba(255, 140, 0, 0.08) 0%, transparent 25%),
                 radial-gradient(circle at 85% 80%, rgba(255, 69, 0, 0.08) 0%, transparent 25%);
             background-attachment: fixed;
             color: var(--text-primary);
             font-family: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            line-height: 1.5;
+            line-height: 1.6;
             min-height: 100vh;
             display: flex;
             flex-direction: column;
@@ -73,15 +70,13 @@
             letter-spacing: -0.5px;
         }
         
-        .logo span {
-            color: var(--brand-primary);
-        }
+        .logo span { color: var(--brand-primary); }
 
         /* SEÇÃO PRINCIPAL (HERO) */
         main {
             width: 100%;
             max-width: 1100px;
-            padding: 60px 32px;
+            padding: 40px 32px;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -119,7 +114,7 @@
         .subtitle {
             font-size: clamp(1.1rem, 2vw, 1.25rem);
             color: var(--text-secondary);
-            max-width: 600px;
+            max-width: 700px;
             margin-bottom: 40px;
         }
 
@@ -144,10 +139,32 @@
             box-shadow: 0 12px 40px rgba(255, 140, 0, 0.4);
         }
 
+        /* SEÇÕES DE CONTEÚDO (SEO & ADSENSE) */
+        .content-section {
+            width: 100%;
+            margin-top: 80px;
+            text-align: left;
+            padding-top: 40px;
+            border-top: 1px solid var(--surface-border);
+        }
+
+        .content-section h2 {
+            font-size: 2rem;
+            color: var(--brand-primary);
+            margin-bottom: 20px;
+            letter-spacing: -0.5px;
+        }
+
+        .text-block {
+            color: var(--text-secondary);
+            font-size: 1.05rem;
+            margin-bottom: 20px;
+        }
+
         /* GRADE DE RECURSOS (2x2) */
         .features-section {
             width: 100%;
-            margin-top: 80px;
+            margin-top: 60px;
             display: grid;
             grid-template-columns: repeat(2, 1fr);
             gap: 24px;
@@ -193,7 +210,52 @@
         .feature-card p {
             color: var(--text-secondary);
             font-size: 0.95rem;
-            line-height: 1.6;
+        }
+
+        /* MICROBLOG / ARTIGOS */
+        .blog-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        article.blog-post {
+            background: rgba(255,255,255,0.02);
+            border-left: 4px solid var(--brand-primary);
+            padding: 25px;
+            border-radius: 0 12px 12px 0;
+        }
+
+        article.blog-post h3 {
+            font-size: 1.4rem;
+            color: var(--text-primary);
+            margin-bottom: 15px;
+        }
+
+        article.blog-post p {
+            color: var(--text-secondary);
+            margin-bottom: 15px;
+        }
+
+        /* FAQ (PERGUNTAS FREQUENTES) */
+        .faq-item {
+            background: var(--surface-color);
+            border: 1px solid var(--surface-border);
+            border-radius: 12px;
+            margin-bottom: 15px;
+            padding: 20px;
+        }
+
+        .faq-item h3 {
+            color: var(--brand-primary);
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+        }
+
+        .faq-item p {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
         }
 
         /* RODAPÉ E LINKS JURÍDICOS */
@@ -204,7 +266,7 @@
             text-align: center;
             color: var(--text-secondary);
             font-size: 0.85rem;
-            margin-top: 40px;
+            margin-top: 60px;
         }
 
         footer p { margin-bottom: 12px; }
@@ -252,9 +314,7 @@
 
         /* RESPONSIVIDADE PARA CELULAR */
         @media (max-width: 768px) {
-            .features-section {
-                grid-template-columns: 1fr; /* Coluna única no celular */
-            }
+            .features-section { grid-template-columns: 1fr; }
             main { padding: 40px 20px; }
             .feature-card { padding: 24px; }
             .modal-content { padding: 20px; }
@@ -268,53 +328,107 @@
     </header>
 
     <main>
-        <div class="hero-badge">🚀 O FUTURO DAS ENTREGAS</div>
+        <div class="hero-badge">🚀 O FUTURO DA LOGÍSTICA URBANA</div>
         
         <h1>Bem-vindo ao <span class="highlight">Rota Ninja</span></h1>
         
-        <p class="subtitle">A ferramenta que estuda sua planilha bruta e cria uma estratégia visual avançada para eliminar o zig-zag, reduzir manobras e poupar seu asfalto.</p>
+        <p class="subtitle">A ferramenta profissional que processa sua planilha de entregas bruta e cria uma estratégia visual avançada. Otimize tempo, elimine o zig-zag, reduza as manobras e poupe seu combustível e o asfalto.</p>
         
         <a href="/spxninja/" class="btn-primary">
             INICIAR APLICATIVO
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
         </a>
 
-        <!-- GRADE 2x2 PERFEITA -->
+        <!-- GRADE DE RECURSOS PRINCIPAIS -->
         <section class="features-section">
             <div class="feature-card">
                 <div class="feature-icon-wrapper">🧠</div>
                 <h3>Inteligência de Trajeto</h3>
-                <p>O sistema não apenas liga pontos. Ele agrupa pacotes da mesma via, segue o sentido correto da rua (Efeito Zíper) e penaliza cruzamentos para otimizar seu tempo.</p>
+                <p>O algoritmo não apenas liga pontos num mapa. Ele agrupa pacotes da mesma via, segue o sentido correto do trânsito (Efeito Zíper) e penaliza cruzamentos repetidos para garantir máxima otimização do seu tempo.</p>
             </div>
             
             <div class="feature-card">
                 <div class="feature-icon-wrapper">🎒</div>
-                <h3>Separação em Bags</h3>
-                <p>Fatiamos sua carga em Lotes de 10 pacotes. O Mapa de Calor mostra o volume de cada cliente, alertando sobre paradas comerciais e pacotes excedentes.</p>
+                <h3>Sistema Exclusivo de Bags</h3>
+                <p>Fatiamos sua carga diária em Lotes exatos de 10 pacotes. O Mapa de Calor integrado mostra o volume de cada cliente, alertando automaticamente sobre entregas comerciais e pacotes excedentes que demandam atenção.</p>
             </div>
             
             <div class="feature-card">
                 <div class="feature-icon-wrapper">✏️</div>
-                <h3>Combos a Pé (Vagas)</h3>
-                <p>Controle tático nas suas mãos. Desenhe o trajeto desejado na tela e crie estacionamentos centrais para zerar um quarteirão inteiro caminhando, evitando o arranca-e-para.</p>
+                <h3>Rotas Manuais e Combos a Pé</h3>
+                <p>Tenha o controle tático nas suas mãos. Desenhe o trajeto desejado diretamente na tela e crie estacionamentos centrais (Vagas). Zere um quarteirão inteiro caminhando, evitando o desgaste de arranca-e-para do veículo.</p>
             </div>
             
             <div class="feature-card">
                 <div class="feature-icon-wrapper">🧭</div>
                 <h3>GPS Focado e Limpo</h3>
-                <p>Navegação em 3 camadas visuais (histórico, atual e próximo alvo). Conta com alerta sonoro de radares e realiza a baixa automática no sistema ao chegar próximo ao cliente.</p>
+                <p>Experimente uma navegação tática em 3 camadas visuais (histórico do que passou, rota atual e previsão do próximo alvo). Conta com alerta sonoro de radares e realiza a baixa automática no sistema ao se aproximar do cliente.</p>
             </div>
         </section>
+
+        <!-- SEÇÃO DE CONTEÚDO PROFUNDO (Focado no AdSense) -->
+        <section class="content-section">
+            <h2>Como o Rota Ninja Transforma a Última Milha</h2>
+            <p class="text-block">
+                A entrega de última milha (Last Mile Delivery) é a etapa mais cara e demorada de toda a cadeia logística. Motoristas parceiros e entregadores independentes perdem horas preciosas todos os dias tentando decifrar planilhas confusas, sofrendo com rotas que os fazem cruzar a mesma rua diversas vezes e gastando combustível desnecessariamente com manobras em vias de mão única.
+            </p>
+            <p class="text-block">
+                O <strong>Rota Ninja</strong> nasceu para solucionar esse gargalo tecnológico. Diferente dos aplicativos tradicionais de navegação, que apenas calculam a distância mais curta entre o Ponto A e o Ponto B, nossa plataforma atua como um verdadeiro gerente logístico no seu navegador. O sistema aplica o conceito de "Efeito Zíper", garantindo que você faça as entregas seguindo o fluxo natural das vias, reduzindo drasticamente as conversões perigosas à esquerda e otimizando a vida útil dos componentes do seu veículo.
+            </p>
+        </section>
+
+        <!-- MICROBLOG: DICAS E ARTIGOS -->
+        <section class="content-section" id="artigos">
+            <h2>Dicas Essenciais para Entregadores</h2>
+            <div class="blog-grid">
+                
+                <article class="blog-post">
+                    <h3>O Método das Bags: Como organizar 100 pacotes em minutos</h3>
+                    <p>O maior erro do entregador iniciante é jogar toda a carga no carro de forma aleatória. O tempo que você perde na calçada procurando uma encomenda é o tempo que você poderia estar descansando em casa. O Rota Ninja introduz o conceito de fatiamento: a cada 10 clientes roteirizados, o sistema cria uma "Bag" virtual.</p>
+                    <p>A tática de organização veicular se torna simples: A Bag 1 (clientes de 1 a 10) vai no banco do passageiro. A Bag 2 vai no chão, atrás do banco. O restante vai para o porta-malas. Quando a Bag 1 esvazia, você simplesmente puxa os itens da Bag 2 para a frente, garantindo uma fluidez perfeita do primeiro ao último cliente do dia.</p>
+                </article>
+
+                <article class="blog-post">
+                    <h3>Arranca-e-para: O vilão silencioso do seu lucro</h3>
+                    <p>Ligar e desligar o carro, engatar a primeira marcha e frear a cada 50 metros destrói a sua média de consumo de combustível (km/L) e desgasta prematuramente o sistema de embreagem e os freios. Na logística inteligente, caminhar pode ser muito mais lucrativo do que dirigir.</p>
+                    <p>Utilizando a ferramenta de "Combos a Pé" (Vagas) do modo manual do Rota Ninja, o entregador identifica um bolsão de clientes numa mesma rua ou condomínio, estaciona o veículo uma única vez e agrupa todos os pacotes. O aplicativo gera um checklist unificado, permitindo que você zere o quarteirão a pé com máxima eficiência e zero gasto de combustível.</p>
+                </article>
+
+                <article class="blog-post">
+                    <h3>A importância de auditar a rota da transportadora</h3>
+                    <p>Muitas vezes, a inteligência artificial das grandes transportadoras roteiriza a carga baseada no CEP, ignorando a realidade da topografia, feiras livres ou vias bloqueadas da sua região. Seguir a rota padrão cegamente pode resultar em horas extras não remuneradas.</p>
+                    <p>Com a tela de auditoria do nosso sistema, você pode comparar em tempo real o trajeto original enviado pela transportadora contra a Rota Otimizada pelo Ninja. O sistema exibe o cálculo exato de quantos quilômetros de asfalto serão poupados, permitindo que você tome decisões baseadas em dados concretos antes mesmo de dar a partida no motor.</p>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- PERGUNTAS FREQUENTES (FAQ) -->
+        <section class="content-section" id="faq">
+            <h2>Perguntas Frequentes (FAQ)</h2>
+            <div class="faq-item">
+                <h3>O aplicativo Rota Ninja é gratuito?</h3>
+                <p>Sim! A plataforma foi desenvolvida para apoiar a comunidade de entregadores e motoristas de aplicativo. O uso da ferramenta de roteirização e leitura de planilhas é totalmente gratuito. A exibição ocasional de anúncios ajuda a manter nossos servidores no ar.</p>
+            </div>
+            <div class="faq-item">
+                <h3>Meus dados de clientes ficam armazenados?</h3>
+                <p>Não. A segurança operacional é nosso pilar fundamental. Toda a leitura da sua planilha (arquivos .xlsx ou .csv) é feita localmente no seu próprio celular usando o navegador. Não temos bancos de dados para capturar ou armazenar informações dos seus destinatários.</p>
+            </div>
+            <div class="faq-item">
+                <h3>Preciso instalar o aplicativo nas lojas oficiais?</h3>
+                <p>O Rota Ninja é um Web App Progressivo (PWA). Você não precisa baixar nada pesado pelas lojas de aplicativos. Basta acessar a plataforma pelo navegador, clicar em "Adicionar à Tela Inicial" nas opções do seu celular, e ele funcionará perfeitamente como um aplicativo nativo.</p>
+            </div>
+        </section>
+
     </main>
 
     <footer>
-        <!-- Links exigidos pelo AdSense injetados aqui -->
         <div class="legal-links">
             <a href="#" onclick="document.getElementById('modal-termos-landing').style.display='flex'; return false;">Termos de Uso</a>
             <a href="#" onclick="document.getElementById('modal-privacidade-landing').style.display='flex'; return false;">Política de Privacidade</a>
         </div>
-        <p>&copy; 2026 Daninjac Apps. Todos os direitos reservados.</p>
-        <p>Desenvolvido com tecnologia e precisão por <a href="https://github.com/daninjac" target="_blank">Daninjac</a>.</p>
+        <p>&copy; 2026 Daninjac Apps. Plataforma focada em inovação logística.</p>
+        <p>Desenvolvido com tecnologia de precisão por <a href="https://github.com/daninjac" target="_blank">Daninjac</a>.</p>
     </footer>
 
     <!-- ========================================== -->
@@ -327,17 +441,17 @@
             <div class="btn-fechar" onclick="document.getElementById('modal-termos-landing').style.display='none'">✕</div>
             <h3 class="legal-title">📜 Termos de Uso</h3>
             <div class="legal-text">
-                <p>O <strong>Rota Ninja</strong> é uma ferramenta independente criada exclusivamente para otimizar a rotina de trabalho na logística urbana, melhorando o desempenho, a segurança visual e a eficiência operacional dos entregadores.</p>
+                <p>O <strong>Rota Ninja</strong> é uma ferramenta independente criada exclusivamente para otimizar a rotina de trabalho na logística urbana, melhorando o desempenho, a segurança visual e a eficiência operacional dos entregadores[cite: 4].</p>
                 
-                <p><strong>1. Propósito do Aplicativo e Gratuidade:</strong> O Rota Ninja é uma plataforma disponibilizada de forma 100% gratuita para os usuários, feita para apoiar o dia a dia dos profissionais de entrega e reduzir o tempo de para-brisa. O aplicativo não cobra taxas de assinatura, mensalidades ou comissões por rotas executadas. A eventual exibição de anúncios serve unicamente para custear a manutenção técnica e os servidores do projeto.</p>
+                <p><strong>1. Propósito do Aplicativo e Gratuidade:</strong> O Rota Ninja é uma plataforma disponibilizada de forma 100% gratuita para os usuários, feita para apoiar o dia a dia dos profissionais de entrega e reduzir o tempo de para-brisa. O aplicativo não cobra taxas de assinatura, mensalidades ou comissões por rotas executadas. A eventual exibição de anúncios serve unicamente para custear a manutenção técnica e os servidores do projeto[cite: 4].</p>
             
-                <p><strong>2. Autonomia e Condução no Trânsito:</strong> O aplicativo sugere sequências e conexões geográficas táticas com base em mapas públicos. O motorista é o único e exclusivo responsável por obedecer às leis de trânsito locais, sinalizações, sentidos de vias e limites de velocidade. O Rota Ninja não se responsabiliza por multas, acidentes, conversões indevidas ou acesso a áreas de risco.</p>
+                <p><strong>2. Autonomia e Condução no Trânsito:</strong> O aplicativo sugere sequências e conexões geográficas táticas com base em mapas públicos. O motorista é o único e exclusivo responsável por obedecer às leis de trânsito locais, sinalizações, sentidos de vias e limites de velocidade. O Rota Ninja não se responsabiliza por multas, acidentes, conversões indevidas ou acesso a áreas de risco[cite: 4].</p>
                 
-                <p><strong>3. Isenção sobre Cargas e Operações de Logística:</strong> O Rota Ninja é uma ferramenta de suporte visual e não possui qualquer vínculo empregatício, comercial ou contratual com transportadoras, aplicativos de entrega ou contratantes do usuário. O aplicativo não se responsabiliza por atrasos nas entregas, avarias, extravios, roubos de carga ou divergências de valores operacionais.</p>
+                <p><strong>3. Isenção sobre Cargas e Operações de Logística:</strong> O Rota Ninja é uma ferramenta de suporte visual e não possui qualquer vínculo empregatício, comercial ou contratual com transportadoras, aplicativos de entrega ou contratantes do usuário. O aplicativo não se responsabiliza por atrasos nas entregas, avarias, extravios, roubos de carga ou divergências de valores operacionais[cite: 4].</p>
                 
-                <p><strong>4. Uso Consciente do Dispositivo:</strong> A manipulação manual do aplicativo (desenho de rotas, edições ou toques contínuos) deve ser realizada obrigatoriamente com o veículo estacionado em local seguro.</p>
+                <p><strong>4. Uso Consciente do Dispositivo:</strong> A manipulação manual do aplicativo (desenho de rotas, edições ou toques contínuos) deve ser realizada obrigatoriamente com o veículo estacionado em local seguro[cite: 4].</p>
                 
-                <p><strong>5. Propriedade Intelectual:</strong> A interface, algoritmos de agrupamento ("Combos a Pé", "Bags"), identidade visual e conceitos do Rota Ninja são protegidos por direitos autorais, sendo proibida a cópia, reprodução ou engenharia reversa do software.</p>
+                <p><strong>5. Propriedade Intelectual:</strong> A interface, algoritmos de agrupamento ("Combos a Pé", "Bags"), identidade visual e conceitos do Rota Ninja são protegidos por direitos autorais, sendo proibida a cópia, reprodução ou engenharia reversa do software[cite: 4].</p>
             </div>
         </div>
     </div>
@@ -348,15 +462,15 @@
             <div class="btn-fechar" onclick="document.getElementById('modal-privacidade-landing').style.display='none'">✕</div>
             <h3 class="legal-title">🔒 Política de Privacidade (LGPD)</h3>
             <div class="legal-text">
-                <p>Sua privacidade e a segurança das suas informações de trabalho são prioridades absolutas no <strong>Rota Ninja</strong>.</p>
+                <p>Sua privacidade e a segurança das suas informações de trabalho são prioridades absolutas no <strong>Rota Ninja</strong>[cite: 4].</p>
                 
-                <p><strong>1. Tratamento de Dados da Planilha:</strong> Todos os arquivos (.xlsx, .csv) e endereços importados para o aplicativo são processados estritamente de forma local no navegador/dispositivo do próprio usuário (tecnologia <em>Client-Side / LocalStorage</em>). <strong>Nenhum dado de destinatário, endereço ou encomenda é enviado, copiado ou armazenado em servidores externos ou bancos de dados do Rota Ninja.</strong></p>
+                <p><strong>1. Tratamento de Dados da Planilha:</strong> Todos os arquivos (.xlsx, .csv) e endereços importados para o aplicativo são processados estritamente de forma local no navegador/dispositivo do próprio usuário (tecnologia <em>Client-Side / LocalStorage</em>). <strong>Nenhum dado de destinatário, endereço ou encomenda é enviado, copiado ou armazenado em servidores externos ou bancos de dados do Rota Ninja</strong>[cite: 4].</p>
                 
-                <p><strong>2. Acesso à Localização (GPS):</strong> O acesso ao GPS do seu dispositivo é solicitado única e exclusivamente para calcular distâncias em tempo real, renderizar a sua navegação e computar métricas operacionais (como odômetro e tempo em movimento). Não rastreamos e não vendemos seu histórico de movimentação geográfica.</p>
+                <p><strong>2. Acesso à Localização (GPS):</strong> O acesso ao GPS do seu dispositivo é solicitado única e exclusivamente para calcular distâncias em tempo real, renderizar a sua navegação e computar métricas operacionais (como odômetro e tempo em movimento). Não rastreamos e não vendemos seu histórico de movimentação geográfica[cite: 4].</p>
                 
-                <p><strong>3. Cookies e Anúncios de Terceiros (Google AdSense):</strong> Utilizamos serviços de terceiros, como o Google AdSense, para exibir anúncios e monetizar a plataforma. O Google pode utilizar <em>cookies</em> e/ou identificadores para veicular anúncios com base nas visitas anteriores do usuário a este ou a outros sites. O usuário pode gerenciar ou desativar o uso de cookies personalizados nas configurações da sua conta Google.</p>
+                <p><strong>3. Cookies e Anúncios de Terceiros (Google AdSense):</strong> Utilizamos serviços de terceiros, como o Google AdSense, para exibir anúncios e monetizar a plataforma. O Google pode utilizar <em>cookies</em> e/ou identificadores para veicular anúncios com base nas visitas anteriores do usuário a este ou a outros sites. O usuário pode gerenciar ou desativar o uso de cookies personalizados nas configurações da sua conta Google[cite: 4].</p>
                 
-                <p><strong>4. Alterações nesta Política:</strong> Reservamo-nos o direito de atualizar esta política periodicamente para manter a conformidade legal e com as diretrizes das redes de anúncios.</p>
+                <p><strong>4. Alterações nesta Política:</strong> Reservamo-nos o direito de atualizar esta política periodicamente para manter a conformidade legal e com as diretrizes das redes de anúncios[cite: 4].</p>
             </div>
         </div>
     </div>
